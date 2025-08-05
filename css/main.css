@@ -1,0 +1,26 @@
+      .bg-custom {
+        background-color: #855028;
+      }
+
+      /* Navbar link hover */
+      .navbar-nav .nav-link:hover {
+        color: #ffd7a0;
+      }
+
+      /* Sticky navbar */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+      }
+
+      /* Header font and color */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Changa One', cursive;
+        color: white;
+      }
+
+      /* Override Bootstrap's text-primary */
+      .text-primary {
+        color: white !important;
+      }
