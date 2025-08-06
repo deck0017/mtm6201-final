@@ -13,47 +13,39 @@
 
     <!-- Custom Styles -->
     <style>
-      /* Navbar background */
       .bg-custom {
         background-color: #855028;
       }
 
-      /* Navbar link hover */
       .navbar-nav .nav-link:hover {
         color: #ffd7a0;
       }
 
-      /* Sticky navbar */
       .navbar {
         position: sticky;
         top: 0;
         z-index: 1020;
       }
 
-      /* Header font and color */
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Changa One', cursive;
         color: white;
       }
 
-      /* Override Bootstrap's text-primary */
       .text-primary {
         color: white !important;
       }
 
-      /* Custom background for post-hero sections */
       .bg-secondary-custom {
         background-color: #7B9286;
       }
 
-      /* White text inside custom background sections */
       .bg-secondary-custom h2,
       .bg-secondary-custom p,
       .bg-secondary-custom a {
         color: white;
       }
 
-      /*white outline button border */
       .bg-secondary-custom .btn-outline-primary {
         border-color: white;
         color: white;
@@ -62,6 +54,28 @@
       .bg-secondary-custom .btn-outline-primary:hover {
         background-color: white;
         color: #7B9286;
+      }
+
+      .bg-hero-blue {
+        background-color: #005f99;
+      }
+
+      .hero-text {
+        color: white;
+      }
+
+      @media (max-width: 576px) {
+        .hero-row {
+          flex-direction: row !important;
+        }
+
+        .hero-img {
+          max-width: 50%;
+        }
+
+        .hero-text {
+          font-size: 1rem;
+        }
       }
     </style>
   </head>
@@ -88,14 +102,21 @@
       </div>
     </nav>
 
-    <!-- Hero / Donate Section -->
-    <section class="text-center bg-dark py-5">
+    <!-- Hero / Donate Section with Side-by-Side Layout -->
+    <section class="py-5 bg-hero-blue">
       <div class="container">
-        <img src="images/home-dog-donate-mb.PNG" class="img-fluid mb-4" alt="Donate section">
-        <h1 class="display-5 text-primary">Donate and make a difference in an animal's life today</h1>
-        <a href="#" class="btn btn-primary btn-lg mt-3">Donate</a>
+        <div class="d-flex flex-column flex-sm-row align-items-center hero-row">
+          <div class="me-sm-4 mb-3 mb-sm-0 hero-img">
+            <img src="images/home-dog-donate-mb.PNG" alt="Donate section" class="img-fluid rounded">
+          </div>
+          <div class="text-center text-sm-start">
+            <h1 class="display-6 hero-text">Donate and make a difference in an animal's life today</h1>
+            <a href="#" class="btn btn-light btn-lg mt-3">DONATE</a>
+          </div>
+        </div>
       </div>
     </section>
+
 
     <!-- Adopt an Animal -->
     <section class="container my-5 bg-secondary-custom">
@@ -167,7 +188,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
+    <footer class="bg-custom text-white text-center py-4">
       <div class="container">
         <p class="mb-1">&copy; 2025 Pawsitive Futures. All rights reserved.</p>
         <ul class="list-inline">

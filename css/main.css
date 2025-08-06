@@ -1,26 +1,63 @@
-      .bg-custom {
-        background-color: #855028;
-      }
+.bg-hero-blue {
+  background-color: #005f99; /* Adjust this blue to match your campaign */
+}
 
-      /* Navbar link hover */
-      .navbar-nav .nav-link:hover {
-        color: #ffd7a0;
-      }
+.btn-light {
+  background-color: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
 
-      /* Sticky navbar */
-      .navbar {
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-      }
+.btn-light:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
 
-      /* Header font and color */
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Changa One', cursive;
-        color: white;
-      }
 
-      /* Override Bootstrap's text-primary */
-      .text-primary {
-        color: white !important;
-      }
+/* === Brand Colors === */
+.bg-custom {
+  background-color: #855028;
+}
+
+.bg-teal {
+  background-color: #007b7b;
+}
+
+/* === Typography === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Changa One', cursive;
+  color: white;
+}
+
+.text-primary {
+  color: white !important;
+}
+
+/* === Navbar === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd7a0;
+}
+
+/* === Buttons === */
+.btn-light {
+  background-color: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
