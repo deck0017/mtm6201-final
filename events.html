@@ -18,25 +18,38 @@
     />
 
     <style>
-      /* ===== Brand & Base ===== */
+      /* Base typography + background */
       body {
         font-family: 'Changa One', cursive;
         background-color: #7B9286;
       }
-
       p,
       .card-text {
         font-family: 'Molengo', sans-serif;
       }
 
+      /* Skip link (hidden until focus) */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #000;
+        color: #fff;
+        padding: 8px 16px;
+        z-index: 100;
+        transition: top 0.3s ease;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+
+      /* Brand colors */
       .bg-custom {
         background-color: #855028;
       }
-
       .bg-secondary-custom {
         background-color: #7B9286;
       }
-
       .btn-register {
         background-color: #165D6F;
         color: #fff;
@@ -46,12 +59,12 @@
         padding: 0.75rem;
         transition: background-color 0.3s;
       }
-
-      .btn-register:hover {
+      .btn-register:hover,
+      .btn-register:focus {
         background-color: #134f5a;
       }
 
-      /* ===== Events Page ===== */
+      /* Events hero */
       .events-hero {
         background: url('images/events-hero-mb.PNG') center/cover no-repeat;
         min-height: 250px;
@@ -62,49 +75,44 @@
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
         font-size: 1.75rem;
       }
-
       .calendar-icon {
         width: 32px;
         height: 32px;
         margin-right: 0.75rem;
       }
 
-      /* ===== Responsive Grid for Event Cards ===== */
+      /* Responsive grid */
       .events-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
-
       @media (min-width: 768px) {
         .events-grid {
           grid-template-columns: repeat(2, 1fr);
         }
       }
-
       @media (min-width: 992px) {
         .events-grid {
           grid-template-columns: repeat(3, 1fr);
         }
       }
 
+      /* Event card */
       .event-card .card-img {
         background-size: cover;
         background-position: center;
         min-height: 200px;
       }
-
       .event-card .card-body {
         padding: 1rem;
         text-align: center;
       }
-
       .event-card .card-title {
         font-size: 1.25rem;
         color: #165D6F;
         margin-bottom: 0.5rem;
       }
-
       .event-card .card-date {
         font-size: 0.9rem;
         font-weight: bold;
@@ -112,160 +120,188 @@
         margin-bottom: 0.75rem;
       }
 
-      /* ===== Calendar Styles ===== */
+      /* Calendar */
       .calendar-container {
         margin-top: 2rem;
       }
-
       .calendar-container h2 {
         text-align: center;
         color: #165D6F;
         margin-bottom: 1rem;
       }
-
       .calendar {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         gap: 1px;
         background: #7B9286;
       }
-
       .calendar div {
         background: #fff;
         padding: 0.75rem;
         min-height: 80px;
         text-align: center;
       }
-
       .calendar .day-name {
         background: #165D6F;
         color: #fff;
         font-weight: bold;
       }
-
       .calendar .today {
         background: #165D6F;
         color: #fff;
       }
+
+      /* Footer */
+      .site-footer {
+        background-color: #855028;
+      }
+      .site-footer small {
+        color: #fff;
+      }
+
+      /* Focus outline */
+      a:focus,
+      button:focus {
+        outline: 3px solid #165D6F;
+        outline-offset: 2px;
+      }
     </style>
   </head>
-
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="images/logo-pawsitive-futures-mobile.png"
-            alt="Pawsitive Futures Logo"
-            height="40"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="adopt.html">Adopt</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="opportunities.html">Opportunities</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="events.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="donate.html">Donate</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Hero with Calendar Icon -->
-    <header class="events-hero mb-4">
-      <img
-        src="images/Calendar.png"
-        alt="Calendar Icon"
-        class="calendar-icon"
-      />
-      Upcoming Events
+    <header role="banner">
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-custom"
+        aria-label="Main navigation"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="images/logo-pawsitive-futures-mobile.png"
+              alt="Pawsitive Futures Logo"
+              height="40"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="adopt.html">Adopt</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="opportunities.html">Opportunities</a></li>
+              <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <!-- Event Cards & Calendar -->
-    <main class="container">
-      <div class="events-grid">
-        <!-- Dog Walk Event -->
-        <div class="event-card card">
-          <div
-            class="card-img"
-            style="background-image:url('images/events-dog-mb.PNG')"
-            role="img"
-            aria-label="Dog walk event"
-          ></div>
-          <div class="card-body">
-            <h3 class="card-title">Community Dog Walk</h3>
-            <p class="card-date">Sat, Aug 21 • 9:00 AM – 11:00 AM</p>
-            <p class="card-text">
-              Come join fellow dog lovers for a scenic group walk and meet other
-              pups in your neighborhood.
-            </p>
-            <button class="btn-register">Register Now</button>
-          </div>
+    <main id="main-content" role="main">
+      <!-- Hero -->
+      <section
+        class="events-hero"
+        aria-labelledby="events-hero-heading"
+        role="region"
+      >
+        <h1 id="events-hero-heading">
+          <img
+            src="images/Calendar.png"
+            alt="Calendar logo"
+            class="calendar-icon"
+            aria-hidden="true"
+          />
+          Upcoming Events
+        </h1>
+      </section>
+
+      <!-- Event Cards & Calendar -->
+      <div class="container mt-4">
+        <div class="events-grid">
+          <!-- Dog Walk Event -->
+          <article
+            class="event-card card"
+            role="article"
+            aria-labelledby="dogwalk-title"
+          >
+            <div
+              class="card-img"
+              style="background-image:url('images/events-dog-mb.PNG')"
+              role="img"
+              aria-label="Community dog walk group in park"
+            ></div>
+            <div class="card-body">
+              <h2 id="dogwalk-title" class="card-title">
+                Community Dog Walk
+              </h2>
+              <p class="card-date">Sat, Aug 21 • 9:00 AM – 11:00 AM</p>
+              <p class="card-text">
+                Come join fellow dog lovers for a scenic group walk and meet
+                other pups in your neighborhood.
+              </p>
+              <button class="btn-register">Register Now</button>
+            </div>
+          </article>
+
+          <!-- Cat Adoption Event -->
+          <article
+            class="event-card card"
+            role="article"
+            aria-labelledby="catfair-title"
+          >
+            <div
+              class="card-img"
+              style="background-image:url('images/events-cats-mb.PNG')"
+              role="img"
+              aria-label="Cat wearing sunglasses"
+            ></div>
+            <div class="card-body">
+              <h2 id="catfair-title" class="card-title">Cat Adoption Fair</h2>
+              <p class="card-date">Sun, Sep 6 • 11:00 AM – 3:00 PM</p>
+              <p class="card-text">
+                Find your purrfect match at our Cat Adoption Fair—meet charming
+                cats ready for forever homes.
+              </p>
+              <button class="btn-register">Adopt a Cat</button>
+            </div>
+          </article>
         </div>
 
-        <!-- Cat Adoption Event -->
-        <div class="event-card card">
+        <!-- Calendar -->
+        <section
+          class="calendar-container"
+          aria-labelledby="calendar-heading"
+          role="region"
+        >
+          <h2 id="calendar-heading">Event Calendar</h2>
           <div
-            class="card-img"
-            style="background-image:url('images/events-cats-mb.PNG')"
-            role="img"
-            aria-label="Cat adoption event"
+            id="calendar"
+            class="calendar"
+            role="table"
+            aria-label="Calendar of the current month"
           ></div>
-          <div class="card-body">
-            <h3 class="card-title">Cat Adoption Fair</h3>
-            <p class="card-date">Sun, Sep 6 • 11:00 AM – 3:00 PM</p>
-            <p class="card-text">
-              Find your purrfect match at our Cat Adoption Fair—meet charming cats
-              ready for forever homes.
-            </p>
-            <button class="btn-register">Adopt a Cat</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Calendar -->
-      <div class="calendar-container">
-        <h2>Event Calendar</h2>
-        <div id="calendar" class="calendar"></div>
+        </section>
       </div>
     </main>
 
-
-       <!-- Footer -->
-    <footer class="site-footer bg-custom text-center py-3">
+    <footer role="contentinfo" class="site-footer text-center py-3">
       <small>© 2025 Pawsitive Futures. All rights reserved.</small>
     </footer>
 
     <!-- Bootstrap JS Bundle -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       ;(function renderCalendar() {
         const cal = document.getElementById('calendar');
