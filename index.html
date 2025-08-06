@@ -1,208 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pawsitive Futures Homepage (Mobile)</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pawsitive Futures Homepage</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 
-    <!-- Google Fonts: Changa One -->
-    <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Changa One + Molengo -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Changa+One&family=Molengo&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- Custom Styles -->
-    <style>
-      .bg-custom {
-        background-color: #855028;
-      }
+  <style>
+    /* Base typography */
+    body {
+      font-family: 'Changa One', cursive;
+    }
+    p {
+      font-family: 'Molengo', sans-serif;
+    }
 
-      .navbar-nav .nav-link:hover {
-        color: #ffd7a0;
-      }
+    /* Brand colors */
+    .bg-custom {
+      background-color: #855028;
+    }
+    .bg-hero-blue {
+      background-color: #165D6F;
+    }
+    .bg-secondary-custom {
+      background-color: #7B9286;
+    }
 
-      .navbar {
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-      }
+    /* Utility overrides */
+    .text-white {
+      color: #fff !important;
+    }
+    .btn-light {
+      font-weight: bold;
+    }
+  </style>
+</head>
 
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Changa One', cursive;
-        color: white;
-      }
+<body>
 
-      .text-primary {
-        color: white !important;
-      }
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-custom">
+    <div class="container-fluid position-relative">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      .bg-secondary-custom {
-        background-color: #7B9286;
-      }
+      <a
+        class="navbar-brand position-absolute top-50 start-50 translate-middle"
+        href="#"
+      >
+        <img src="images/logo-paws-without-text.png" alt="Pawsitive Futures" height="40" />
+      </a>
 
-      .bg-secondary-custom h2,
-      .bg-secondary-custom p,
-      .bg-secondary-custom a {
-        color: white;
-      }
-
-      .bg-secondary-custom .btn-outline-primary {
-        border-color: white;
-        color: white;
-      }
-
-      .bg-secondary-custom .btn-outline-primary:hover {
-        background-color: white;
-        color: #7B9286;
-      }
-
-      .bg-hero-blue {
-        background-color: #005f99;
-      }
-
-      .hero-text {
-        color: white;
-      }
-
-      @media (max-width: 576px) {
-        .hero-row {
-          flex-direction: row !important;
-        }
-
-        .hero-img {
-          max-width: 50%;
-        }
-
-        .hero-text {
-          font-size: 1rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="images/logo-paws-without-text.png" alt="Pawsitive Futures Logo" height="40">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Adopt</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Join</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Donate</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Hero / Donate Section with Side-by-Side Layout -->
-    <section class="py-5 bg-hero-blue">
-      <div class="container">
-        <div class="d-flex flex-column flex-sm-row align-items-center hero-row">
-          <div class="me-sm-4 mb-3 mb-sm-0 hero-img">
-            <img src="images/home-dog-donate-mb.PNG" alt="Donate section" class="img-fluid rounded">
-          </div>
-          <div class="text-center text-sm-start">
-            <h1 class="display-6 hero-text">Donate and make a difference in an animal's life today</h1>
-            <a href="#" class="btn btn-light btn-lg mt-3">DONATE</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Adopt an Animal -->
-    <section class="container my-5 bg-secondary-custom">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-6 text-center">
-          <img src="images/adopt-an-animal-mb.PNG" class="img-fluid mx-auto d-block rounded" alt="Adopt an animal">
-        </div>
-        <div class="col-md-6">
-          <h2 class="text-primary">Adopt an Animal</h2>
-          <p>For individuals looking to adopt, motivated by the desire to give a pet a second chance: Be the change an animal needs in their life—and make a difference in your community today. Available animals for adoption include dogs, cats, and bunnies.</p>
-          <a href="#" class="btn btn-outline-primary">View Available Pets</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Join the Crew -->
-    <section class="container my-5 bg-secondary-custom">
-      <div class="row g-4 align-items-center flex-md-row-reverse">
-        <div class="col-md-6 text-center">
-          <img src="images/join-the-crew-mb.PNG" class="img-fluid mx-auto d-block rounded" alt="Join the crew">
-        </div>
-        <div class="col-md-6">
-          <h2 class="text-primary">Join the Crew</h2>
-          <p>Looking for employment opportunities at Pawsitive Futures? Join our team and work alongside animals every day! We also warmly welcome volunteers to help us foster and find loving homes for our wonderful animal companions.</p>
-          <a href="#" class="btn btn-outline-primary">Get Involved</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Get in Touch -->
-    <section class="container my-5 bg-secondary-custom">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-6 text-center">
-          <img src="images/get-in-touch-mb.PNG" class="img-fluid mx-auto d-block rounded" alt="Get in touch">
-        </div>
-        <div class="col-md-6">
-          <h2 class="text-primary">Get in Touch</h2>
-          <p>Looking to get in touch or ask us a question? No worries! Feel free to reach out by sending us an email, giving us a call, or simply filling out the contact form on our website. Whatever your preference, we've got you covered!</p>
-          <a href="#" class="btn btn-outline-primary">Contact Us</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Mission -->
-    <section class="container my-5 bg-secondary-custom">
-      <div class="row g-4 align-items-center flex-md-row-reverse">
-        <div class="col-md-6 text-center">
-          <img src="images/our-mission-mb.PNG" class="img-fluid mx-auto d-block rounded" alt="Our mission">
-        </div>
-        <div class="col-md-6">
-          <h2 class="text-primary">Our Mission</h2>
-          <p>Your donations directly benefit both the animals and our organization. One-time or monthly contributions are deeply appreciated—and vital to helping Pawsitive Futures continue making a lasting impact in the community. </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="container my-5 bg-secondary-custom">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-6 text-center">
-          <img src="images/act-now-mb.PNG" class="img-fluid mx-auto d-block rounded" alt="Call to action">
-        </div>
-        <div class="col-md-6">
-          <h2 class="text-primary">Act Now</h2>
-          <p></p>
-          <a href="#" class="btn btn-primary">Donate Today</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-custom text-white text-center py-4">
-      <div class="container">
-        <p class="mb-1">&copy; 2025 Pawsitive Futures. All rights reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Adopt</a></li>
-          <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">About Us</a></li>
-          <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Opportunities</a></li>
-          <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Events</a></li>
-          <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Contact</a></li>
-          <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Donate</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Adopt</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Opportunities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Donate</a></li>
         </ul>
       </div>
-    </footer>
+    </div>
+  </nav>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- Donate Hero -->
+  <section class="text-white bg-hero-blue py-5 text-center">
+    <div class="container">
+      <img
+        src="images/home-dog-donate-mb.PNG"
+        alt="Donate"
+        class="img-fluid rounded mb-3"
+      />
+      <h2 class="h4">Donate and make a difference in an animal's life today</h2>
+      <a href="#" class="btn btn-light btn-lg mt-3">DONATE</a>
+    </div>
+  </section>
+
+  <!-- Adopt Section -->
+  <section class="bg-secondary-custom text-white py-5">
+    <div class="container text-center">
+      <img
+        src="images/adopt-an-animal-mb.PNG"
+        alt="Adopt"
+        class="img-fluid rounded mb-3"
+      />
+      <h2 class="h4">Adopt an Animal</h2>
+      <p>
+        For individuals looking to adopt, motivated by the desire to give a pet a second chance: Be the change an animal needs in their life—and make a difference in your community today. Available animals for adoption include dogs, cats, and bunnies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Join Section -->
+  <section class="bg-secondary-custom text-white py-5">
+    <div class="container text-center">
+      <img
+        src="images/join-the-crew-mb.PNG"
+        alt="Join the Crew"
+        class="img-fluid rounded mb-3"
+      />
+      <h2 class="h4">Join the Crew</h2>
+      <p>
+Looking for employment opportunities at Pawsitive Futures? Join our team and work alongside animals every day! We also warmly welcome volunteers to help us foster and find loving homes for our wonderful animal companions.      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-secondary-custom text-white py-5">
+    <div class="container text-center">
+      <img
+        src="images/get-in-touch-mb.PNG"
+        alt="Get in Touch"
+        class="img-fluid rounded mb-3"
+      />
+      <h2 class="h4">Get in Touch</h2>
+      <p>
+Looking to get in touch or ask us a question? No worries! Feel free to reach out by sending us an email, giving us a call, or simply filling out the contact form on our website. Whatever your preference, we've got you covered!      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="bg-secondary-custom text-white py-5">
+    <div class="container text-center">
+      <img
+        src="images/our-mission-mb.PNG"
+        alt="Our Mission"
+        class="img-fluid rounded mb-3"
+      />
+      <h2 class="h4">Our Mission</h2>
+      <p>
+Pawsitive Futures is dedicated to helping pets find loving homes through adoption, while promoting volunteer and fostering opportunities.   We also provide essential resources for pet owners. We're here to be the change—and bring joy to some furry faces!      </p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-secondary-custom text-white py-5 text-center">
+    <div class="container">
+      <img
+        src="images/act-now-mb.PNG"
+        alt="Act Now"
+        class="img-fluid rounded mb-3"
+      />
+      <h2 class="h4">Call to action</h2>
+      <p>
+Your donations directly benefit both the animals and our organization. One-time or monthly contributions are deeply appreciated—and vital to helping Pawsitive Futures continue making a lasting impact in the community.      </p>
+      <a href="#" class="btn btn-light btn-lg mt-2">Donate Today</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-custom text-white text-center py-3">
+    <small>© 2025 Pawsitive Futures. All rights reserved.</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
 </html>

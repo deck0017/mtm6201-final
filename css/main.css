@@ -1,3 +1,48 @@
+/* Tablet layout adjustments */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hero-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-img {
+    max-width: 45%;
+  }
+
+  .hero-text {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  .btn-light {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 1rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+}
+
+
+
 .bg-hero-blue {
   background-color: #005f99; /* Adjust this blue to match your campaign */
 }
